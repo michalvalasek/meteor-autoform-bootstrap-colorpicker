@@ -9,7 +9,7 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2');
   api.use('templating@1.0.0');
-  api.use('aldeed:autoform@5.0.0');
+  api.use('aldeed:autoform@5.0.0', 'client');
   api.addFiles([
     'lib/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.js',
     'lib/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.css',
