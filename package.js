@@ -1,6 +1,6 @@
 Package.describe({
   name: 'michalvalasek:autoform-bootstrap-colorpicker',
-  version: '0.0.2',
+  version: '0.1.0',
   summary: 'Custom bootstrap colorpicker input type for Autoform',
   git: 'https://github.com/michalvalasek/meteor-autoform-bootstrap-colorpicker.git',
   documentation: 'README.md'
