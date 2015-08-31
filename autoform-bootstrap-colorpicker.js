@@ -17,13 +17,14 @@ Template.afBootstrapColorpicker.helpers({
   }
 });
 
-Template.afBootstrapColorpicker.rendered = function () {
+Template.afBootstrapColorpicker.onRendered(function afBootstrapColorpickerOnRendered() {
   var $input = this.$('.input-group');
   // initiate the colorpicker
-  $input.colorpicker();
-};
+  this.colorpicker = $input.colorpicker().data('colorpicker');
+});
 
-Template.afBootstrapColorpicker.destroyed = function () {
-  var $input = this.$('.input-group');
-  $input.colorpicker('destroy');
-};
+Template.afBootstrapColorpicker.onDestroyed(function afBootstrapColorpickerOnDestroyed() {
+  // Reference to the picker instance is lost when removed from dom.
+  // Destroying the instance directly.
+  this.colorpicker.destroy();
+});
